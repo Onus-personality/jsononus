@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import { Button } from '@nextui-org/button';
 import { RadioGroup, Radio } from '@nextui-org/radio';
 import { Progress } from '@nextui-org/progress';
@@ -14,6 +14,8 @@ import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
 import { Card, CardHeader } from '@nextui-org/card';
+import { UserContext } from '@/app/providers';
+
 
 interface SurveyProps {
   questions: Question[];
@@ -41,7 +43,10 @@ export const Survey = ({
   const [inProgress, setInProgress] = useState(false);
   const { width } = useWindowDimensions();
   const seconds = useTimer();
+  //@ts-ignore
+  const {user} = useContext(UserContext);
 
+  //@ts-ignore
   useEffect(() => {
     const handleResize = () => {
       setQuestionsPerPage(window.innerWidth > 768 ? 3 : 1);
@@ -148,7 +153,9 @@ export const Survey = ({
       invalid: false,
       timeElapsed: seconds,
       dateStamp: new Date(),
-      answers
+      answers,
+      name: user.name,
+      email: user.email
     });
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');

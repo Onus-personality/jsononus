@@ -60,7 +60,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
             <Logo />
           </NextLink>
         </NavbarBrand>
-        <div className='hidden md:flex gap-4 justify-start ml-2'>
+        {/* <div className='hidden md:flex gap-4 justify-start ml-2'>
           {navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -76,10 +76,10 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
               </NextLink>
             </NavbarItem>
           ))}
-        </div>
+        </div> */}
       </NavbarContent>
 
-      <NavbarContent
+      {/* <NavbarContent
         className='hidden md:flex basis-1/5 sm:basis-full'
         justify='end'
       >
@@ -95,9 +95,9 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         <NavbarItem>
           <LocaleSwitcherFull />
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
 
-      <NavbarContent className='md:hidden basis-1 pl-4' justify='end'>
+      {/* <NavbarContent className='md:hidden basis-1 pl-4' justify='end'>
         <NavbarItem>
           <LocaleSwitcher />
         </NavbarItem>
@@ -114,7 +114,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           />
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
 
       <NavbarMenu>
         <div className='mx-4 mt-2 flex flex-col gap-2'>

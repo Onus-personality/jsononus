@@ -1,0 +1,9 @@
+.hide-on-screen {
+    display: none !important;
+}
+
+@media print {
+    .hide-on-screen {
+        display: block !important;
+    }
+}

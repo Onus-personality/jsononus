@@ -111,9 +111,9 @@ export default async function RootLayout({
             <Navbar navItems={navItems} navMenuItems={navMenuItems} />
             <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
               {children}
-              <CookieBanner />
+              {/* <CookieBanner /> */}
             </main>
-            <Footer footerLinks={footerLinks} />
+            {/* <Footer footerLinks={footerLinks} /> */}
           </div>
         </Providers>
         <Script

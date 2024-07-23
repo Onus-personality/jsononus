@@ -3,18 +3,73 @@
 import { Button, Tooltip } from '@nextui-org/react';
 import { CopyIcon, FacebookIcon, PDFIcon, TwitterIcon } from './icons';
 import { Link as NextUiLink } from '@nextui-org/link';
-import { Report } from '@/actions/index';
+import { Report, sendPDF } from '@/actions/index';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
+//@ts-ignore
+import html2pdf from 'html2pdf.js';
+import { useContext, useEffect, useRef, useState } from 'react';
 
 interface ShareBarProps {
   report: Report;
-}
+  id: string;
+} // components/GeneratePdf.tsx
 
-export default function ShareBar({ report }: ShareBarProps) {
+import { jsPDF } from 'jspdf';
+
+export default function ShareBar({ report, id }: ShareBarProps) {
+  // const [emailSent, setEmailSent] = useState(false);
+  const pdfSent = useRef(false);
+
   const [_, copy] = useCopyToClipboard();
 
   const handleCopy = (text: string) => async () => await copy(text);
+  // const waitForImages = () => {
+  //   const images = document.querySelectorAll('img');
+  //   return Promise.all(
+  //     Array.from(images)
+  //       .filter((img) => !img.complete)
+  //       .map(
+  //         (img) =>
+  //           new Promise((resolve) => {
+  //             img.onload = img.onerror = resolve;
+  //           })
+  //       )
+  //   );
+  // };
+  const handleSendPDF = async () => {
+    try {
+      const result = await sendPDF(id);
+      if (result.success) {
+        console.log('PDF sent!');
+      } else {
+        alert('Failed to send PDF. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending PDF:', error);
+    }
+  };
 
+  // if (!pdfSent.current) {
+  //   setTimeout(() => {
+  //   handleSendPDF();
+  //   pdfSent.current = true;
+  //   // setEmailSent(true);
+  //   }, 1000);
+  // }
+  // useEffect(() => {
+  //   const handleSendPDF = async () => {
+  //     try {
+  //       const result = await sendPDF(id);
+  //       if (result.success) {
+  //         console.log('PDF sent!');
+  //       } else {
+  //         alert('Failed to send PDF. Please try again.');
+  //       }
+  //     } catch (error) {
+  //       console.error('Error sending PDF:', error);
+  //     }
+  //   };
+  // }, []);
   return (
     <>
       <Tooltip color='secondary' content='Share on facebook'>

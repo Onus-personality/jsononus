@@ -19,6 +19,8 @@ export type DbResult = {
   timeElapsed: number;
   dateStamp: string;
   answers: Answer[];
+  name: string,
+  email: string,
 };
 
 export type Feedback = {
