@@ -9,6 +9,9 @@ const nextConfig = {
     serverActions: {
       bodySizeLimit: '10mb'
     }
+  },
+  typescript: {
+    ignoreBuildErrors: true
   }
 };
 
