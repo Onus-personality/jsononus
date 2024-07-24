@@ -6,12 +6,7 @@
       "use": "@vercel/next"
     }
   ],
-  "functions": {
-    "api/*": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
+ 
   "build": {
     "env": {
       "CHROME_EXECUTABLE_PATH": "/usr/bin/chromium-browser"
