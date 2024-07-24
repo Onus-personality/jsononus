@@ -113,6 +113,9 @@ importers:
       canvas-confetti:
         specifier: 1.9.2
         version: 1.9.2
+      chrome-aws-lambda:
+        specifier: ^10.1.0
+        version: 10.1.0(puppeteer-core@22.13.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -170,6 +173,9 @@ importers:
       puppeteer:
         specifier: ^22.13.1
         version: 22.13.1(typescript@5.4.5)
+      puppeteer-core:
+        specifier: ^22.13.1
+        version: 22.13.1
       react:
         specifier: 18.3.0
         version: 18.3.0
@@ -2326,6 +2332,12 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
+  chrome-aws-lambda@10.1.0:
+    resolution: {integrity: sha512-NZQVf+J4kqG4sVhRm3WNmOfzY0OtTSm+S8rg77pwePa9RCYHzhnzRs8YvNI6L9tALIW6RpmefWiPURt3vURXcw==}
+    engines: {node: '>= 10.16'}
+    peerDependencies:
+      puppeteer-core: ^10.1.0
+
   chromium-bidi@0.6.1:
     resolution: {integrity: sha512-kSxJRj0VgtUKz6nmzc2JPfyfJGzwzt65u7PqhPHtgGQUZLF5oG+ST6l6e5ONfStUMAlhSutFCjaGKllXZa16jA==}
     peerDependencies:
@@ -3453,6 +3465,13 @@ packages:
   kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+
+  lambdafs@2.1.1:
+    resolution: {integrity: sha512-x5k8JcoJWkWLvCVBzrl4pzvkEHSgSBqFjg3Dpsc4AcTMq7oUMym4cL/gRTZ6VM4mUMY+M0dIbQ+V1c1tsqqanQ==}
+    engines: {node: '>= 10.16'}
+    hasBin: true
+    bundledDependencies:
+      - tar-fs
 
   language-subtag-registry@0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
@@ -5227,7 +5246,7 @@ snapshots:
   '@esbuild-plugins/node-resolve@0.1.4(esbuild@0.21.5)':
     dependencies:
       '@types/resolve': 1.20.6
-      debug: 4.3.4
+      debug: 4.3.5
       esbuild: 0.21.5
       escape-string-regexp: 4.0.0
       resolve: 1.22.8
@@ -6660,7 +6679,7 @@ snapshots:
       '@opentelemetry/propagator-b3': 1.24.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/propagator-jaeger': 1.24.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.24.0(@opentelemetry/api@1.8.0)
-      semver: 7.6.0
+      semver: 7.6.3
 
   '@opentelemetry/semantic-conventions@1.13.0': {}
 
@@ -7612,7 +7631,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.2.0
       '@typescript-eslint/visitor-keys': 7.2.0
-      debug: 4.3.4
+      debug: 4.3.5
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
@@ -7658,7 +7677,7 @@ snapshots:
 
   agent-base@6.0.2:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -8072,6 +8091,11 @@ snapshots:
 
   chownr@2.0.0:
     optional: true
+
+  chrome-aws-lambda@10.1.0(puppeteer-core@22.13.1):
+    dependencies:
+      lambdafs: 2.1.1
+      puppeteer-core: 22.13.1
 
   chromium-bidi@0.6.1(devtools-protocol@0.0.1299070):
     dependencies:
@@ -9225,7 +9249,7 @@ snapshots:
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.4
+      debug: 4.3.5
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -9512,6 +9536,8 @@ snapshots:
   kind-of@6.0.3: {}
 
   kleur@4.1.5: {}
+
+  lambdafs@2.1.1: {}
 
   language-subtag-registry@0.3.22: {}
 
@@ -9918,7 +9944,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.4
+      debug: 4.3.5
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0

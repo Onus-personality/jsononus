@@ -4,7 +4,8 @@ import os from 'os';
 import fs from 'fs';
 import path from 'path';
 import { compress } from 'compress-pdf'; 
-import puppeteer from 'puppeteer';
+import chromium from 'chrome-aws-lambda';
+import puppeteer from 'puppeteer-core';
 
 import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
@@ -19,16 +20,7 @@ import nodemailer from 'nodemailer';
 import { transporter } from '@/config/nodemailer';
 import compressPDF from 'pdf-compressor'
 import { PDFDocument } from 'pdf-lib'; 
-// Function to read and replace placeholders in the email template
-// const getEmailTemplate = (userName: string, userEmail: string): string => {
-// const templatePath = path.join(__dirname, '../lib/emailTemplate.html');
-//   const template = fs.readFileSync(templatePath, 'utf8');
 
-//   // Replace placeholders
-//   return template
-//     .replace('{{userName}}', userName)
-//     .replace('{{userEmail}}', userEmail);
-// };
 const template = `
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +73,7 @@ const template = `
 </body>
 </html>
 `;
+
 const collectionName = process.env.DB_COLLECTION || 'results';
 const resultLanguages = getInfo().languages;
 
@@ -94,42 +87,46 @@ export type Report = {
   email: string
 };
 
-// ==========================================
-
-
 export async function createPDF(id: string) {
   'use server';
   let browser;
 
   try {
-    browser = await puppeteer.launch();
+    console.log('Launching browser...');
+    browser = await chromium.puppeteer.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath,
+      headless: chromium.headless,
+    });
+    console.log('Browser launched successfully');
+
     const page = await browser.newPage();
 
-    // Use an environment variable for the base URL
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+    console.log(`Navigating to ${baseUrl}/result/${id}`);
 
-    // Navigate to the current page
     await page.goto(`${baseUrl}/result/${id}`, {
       waitUntil: ['load', 'networkidle0'],
       timeout: 90000
     });
 
-    // Get the current URL
-    const url = await page.url();
-
+    console.log('Page loaded, generating PDF...');
     const pdf = await page.pdf({
       format: 'A4',
       printBackground: true,
       preferCSSPageSize: true
     });
+    console.log('PDF generated successfully');
 
     return pdf;
   } catch (error) {
     console.error('Error creating PDF:', error);
-    throw error; // Re-throw the error after logging it
+    throw error;
   } finally {
     if (browser) {
       await browser.close();
+      console.log('Browser closed');
     }
   }
 }
@@ -137,6 +134,7 @@ export async function createPDF(id: string) {
 export async function sendEmail(pdfBuffer: Buffer, user) {
   'use server';
 
+  console.log('Setting up email transporter...');
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -165,22 +163,29 @@ export async function sendEmail(pdfBuffer: Buffer, user) {
     ]
   };
 
+  console.log('Sending email...');
   await transporter.sendMail(mailOptions);
+  console.log('Email sent successfully');
 }
+
 export async function sendPDF(id: string, user) {
   'use server';
 
   try {
+    console.log(`Starting PDF creation for id: ${id}`);
     const pdfBuffer = await createPDF(id);
+    console.log(`PDF created successfully for id: ${id}`);
+    
+    console.log(`Attempting to send email for user: ${user.email}`);
     await sendEmail(pdfBuffer, user);
+    console.log(`Email sent successfully to: ${user.email}`);
+    
     return { success: true };
   } catch (error) {
-    console.error('Error sending PDF:', error);
-    return { success: false, error: 'Failed to send PDF' };
+    console.error('Error in sendPDF:', error);
+    return { success: false, error: error.message };
   }
 }
-// ========================
-
 
 export async function getTestResult(
   id: string,
@@ -218,7 +223,7 @@ export async function getTestResult(
     if (error instanceof B5Error) {
       throw error;
     }
-    throw new Error('Something wrong happend. Failed to get test result!');
+    throw new Error('Something wrong happened. Failed to get test result!');
   }
 }
 
