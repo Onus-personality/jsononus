@@ -3,10 +3,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 import os from 'os';
 import fs from 'fs';
 import path from 'path';
-import { compress } from 'compress-pdf'; 
-import chromium from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
-
+import chromium from '@sparticuz/chromium';
 import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
@@ -93,11 +91,11 @@ export async function createPDF(id: string) {
 
   try {
     console.log('Launching browser...');
-    browser = await chromium.puppeteer.launch({
+    browser = await puppeteer.launch({
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
-      executablePath: await chromium.executablePath,
-      headless: chromium.headless,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless
     });
     console.log('Browser launched successfully');
 
