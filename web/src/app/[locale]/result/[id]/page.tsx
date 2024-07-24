@@ -40,15 +40,16 @@ export default async function ResultPage({
 
   try {
     report = await getTestResult(params.id.substring(0, 24), searchParams.lang);
-    console.log('result123',report)
+    await sendPDF(params.id.substring(0, 24), { name: report.name, email: report.email })
+    // console.log('result123',report)
     // Start the sendPDF call without waiting for it to finish
     // setTimeout(() => {
       // if (!sent) {
-        await sendPDF(params.id.substring(0, 24), { name: report.name, email: report.email }).catch(
-          (error) => {
-            console.error('Failed to send PDF:', error);
-          }
-        );
+        // await sendPDF(params.id.substring(0, 24), { name: report.name, email: report.email }).catch(
+        //   (error) => {
+        //     console.error('Failed to send PDF:', error);
+        //   }
+        // );
         // sent = true;
       // }
     // }, 2000);
