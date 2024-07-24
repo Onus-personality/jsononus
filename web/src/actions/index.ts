@@ -16,61 +16,9 @@ import generateResult, {
 } from '@bigfive-org/results';
 import nodemailer from 'nodemailer';
 import { transporter } from '@/config/nodemailer';
-import compressPDF from 'pdf-compressor'
-import { PDFDocument } from 'pdf-lib'; 
+import compressPDF from 'pdf-compressor';
 
-const template = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Results</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    .container {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #333;
-      text-align: center;
-    }
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Hello, {{userName}}!</h1>
-    <p>We have attached your test results in the PDF document below.</p>
-    <p>If you have any questions or need further assistance, feel free to reply to this email.</p>
-    <p>Best regards,<br>Your Company Team</p>
-    <div class="footer">
-      <p>This email was sent to {{userEmail}}</p>
-    </div>
-  </div>
-</body>
-</html>
-`;
+const template = `...`;
 
 const collectionName = process.env.DB_COLLECTION || 'results';
 const resultLanguages = getInfo().languages;
@@ -81,20 +29,19 @@ export type Report = {
   availableLanguages: Language[];
   language: string;
   results: Domain[];
-  name: string,
-  email: string
+  name: string;
+  email: string;
 };
 
 export async function createPDF(id: string) {
-  'use server';
   let browser;
-
   try {
     console.log('Preparing to launch browser...');
-    await chromium.font('/var/task/web/.next/server/bin/chromium/fonts');
 
-    const executablePath =
-      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath());
+    // Remove the line that tries to add fonts from a non-existing path
+    // await chromium.font('/var/task/web/.next/server/bin/chromium/fonts');
+
+    const executablePath = await chromium.executablePath;
     console.log('Executable path:', executablePath);
 
     browser = await puppeteer.launch({
@@ -138,8 +85,6 @@ export async function createPDF(id: string) {
 }
 
 export async function sendEmail(pdfBuffer: Buffer, user) {
-  'use server';
-
   console.log('Setting up email transporter...');
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -160,7 +105,7 @@ export async function sendEmail(pdfBuffer: Buffer, user) {
         <h2>Email: ${user.email}</h2>
       </body>
     </html>
-  `,
+    `,
     attachments: [
       {
         filename: 'results.pdf',
@@ -175,17 +120,15 @@ export async function sendEmail(pdfBuffer: Buffer, user) {
 }
 
 export async function sendPDF(id: string, user) {
-  'use server';
-
   try {
     console.log(`Starting PDF creation for id: ${id}`);
     const pdfBuffer = await createPDF(id);
     console.log(`PDF created successfully for id: ${id}`);
-    
+
     console.log(`Attempting to send email for user: ${user.email}`);
     await sendEmail(pdfBuffer, user);
     console.log(`Email sent successfully to: ${user.email}`);
-    
+
     return { success: true };
   } catch (error) {
     console.error('Error in sendPDF:', error);
@@ -197,13 +140,12 @@ export async function getTestResult(
   id: string,
   language?: string
 ): Promise<Report | undefined> {
-  'use server';
   try {
     const query = { _id: new ObjectId(id) };
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
     const report = await collection.findOne(query);
-    console.log('report123',report)
+    console.log('report123', report);
     if (!report) {
       console.error(`The test results with id ${id} are not found!`);
       throw new B5Error({
@@ -213,7 +155,7 @@ export async function getTestResult(
     }
     const selectedLanguage =
       language ||
-      (!!resultLanguages.find((l) => l.id == report.lang) ? report.lang : 'en');
+      (resultLanguages.find((l) => l.id == report.lang) ? report.lang : 'en');
     const scores = calculateScore({ answers: report.answers });
     const results = generateResult({ lang: selectedLanguage, scores });
     return {
@@ -223,7 +165,7 @@ export async function getTestResult(
       language: selectedLanguage,
       results,
       name: report.name,
-      email: report.email,
+      email: report.email
     };
   } catch (error) {
     if (error instanceof B5Error) {
@@ -234,7 +176,6 @@ export async function getTestResult(
 }
 
 export async function saveTest(testResult: DbResult) {
-  'use server';
   try {
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
@@ -258,7 +199,6 @@ export async function saveFeedback(
   prevState: FeebackState,
   formData: FormData
 ): Promise<FeebackState> {
-  'use server';
   const feedback: Feedback = {
     name: String(formData.get('name')),
     email: String(formData.get('email')),
