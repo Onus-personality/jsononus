@@ -8,7 +8,8 @@ const nextConfig = {
   experimental: {
     serverActions: {
       bodySizeLimit: '10mb'
-    }
+    },
+    serverComponentsExternalPackages: ['@sparticuz/chromium']
   },
   typescript: {
     ignoreBuildErrors: true
@@ -17,8 +18,15 @@ const nextConfig = {
     if (isServer) {
       config.externals.push('_http_common');
     }
+    // Add this line to handle binary files
+    config.module.rules.push({
+      test: /\.node$/,
+      use: 'node-loader'
+    });
     return config;
-  }
+  },
+  // Add this to handle the Chromium binary
+  output: 'standalone'
 };
 
 module.exports = withContentlayer(withNextIntl(nextConfig));

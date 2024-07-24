@@ -90,11 +90,17 @@ export async function createPDF(id: string) {
   let browser;
 
   try {
-    console.log('Launching browser...');
+    console.log('Preparing to launch browser...');
+    await chromium.font('/var/task/web/.next/server/bin/chromium/fonts');
+
+    const executablePath =
+      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath());
+    console.log('Executable path:', executablePath);
+
     browser = await puppeteer.launch({
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
-      executablePath: await chromium.executablePath(),
+      executablePath,
       headless: chromium.headless
     });
     console.log('Browser launched successfully');
@@ -102,9 +108,10 @@ export async function createPDF(id: string) {
     const page = await browser.newPage();
 
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
-    console.log(`Navigating to ${baseUrl}/result/${id}`);
+    const url = `${baseUrl}/result/${id}`;
+    console.log(`Navigating to ${url}`);
 
-    await page.goto(`${baseUrl}/result/${id}`, {
+    await page.goto(url, {
       waitUntil: ['load', 'networkidle0'],
       timeout: 90000
     });
@@ -113,13 +120,14 @@ export async function createPDF(id: string) {
     const pdf = await page.pdf({
       format: 'A4',
       printBackground: true,
-      preferCSSPageSize: true
+      preferCSSPageSize: true,
+      margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' }
     });
     console.log('PDF generated successfully');
 
     return pdf;
   } catch (error) {
-    console.error('Error creating PDF:', error);
+    console.error('Error in createPDF:', error);
     throw error;
   } finally {
     if (browser) {
