@@ -98,6 +98,7 @@ export type Report = {
 
 
 export async function createPDF(id: string) {
+  'use server';
   let browser;
 
   try {
@@ -125,7 +126,7 @@ export async function createPDF(id: string) {
     return pdf;
   } catch (error) {
     console.error('Error creating PDF:', error);
-    throw error;
+    throw error; // Re-throw the error after logging it
   } finally {
     if (browser) {
       await browser.close();
@@ -134,6 +135,8 @@ export async function createPDF(id: string) {
 }
 
 export async function sendEmail(pdfBuffer: Buffer, user) {
+  'use server';
+
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -164,7 +167,9 @@ export async function sendEmail(pdfBuffer: Buffer, user) {
 
   await transporter.sendMail(mailOptions);
 }
-export async function sendPDF(id:string, user) {
+export async function sendPDF(id: string, user) {
+  'use server';
+
   try {
     const pdfBuffer = await createPDF(id);
     await sendEmail(pdfBuffer, user);
