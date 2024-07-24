@@ -96,32 +96,43 @@ export type Report = {
 
 // ==========================================
 
+
 export async function createPDF(id: string) {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+  let browser;
 
-  // Use an environment variable for the base URL
-  const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+  try {
+    browser = await puppeteer.launch();
+    const page = await browser.newPage();
 
-  // Navigate to the current page
-  await page.goto(`${baseUrl}/result/${id}`, {
-    waitUntil: ['load', 'networkidle0'],
-    timeout: 90000
-  });
+    // Use an environment variable for the base URL
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
 
-  // Get the current URL
-  const url = await page.url();
+    // Navigate to the current page
+    await page.goto(`${baseUrl}/result/${id}`, {
+      waitUntil: ['load', 'networkidle0'],
+      timeout: 90000
+    });
 
-  const pdf = await page.pdf({
-    format: 'A4',
-    printBackground: true,
-    preferCSSPageSize: true
-  });
+    // Get the current URL
+    const url = await page.url();
 
-  await browser.close();
+    const pdf = await page.pdf({
+      format: 'A4',
+      printBackground: true,
+      preferCSSPageSize: true
+    });
 
-  return pdf;
+    return pdf;
+  } catch (error) {
+    console.error('Error creating PDF:', error);
+    throw error;
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
+  }
 }
+
 export async function sendEmail(pdfBuffer: Buffer, user) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
