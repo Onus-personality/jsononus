@@ -4,8 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Bigfive web',
     short_name: 'Bigfive',
-    description:
-      'Learn to know yourself better with a free, open-source personality test.',
+    description: "You can't fail a personality profile. Just be yourself and choose the answers that best describe you",
     start_url: '/',
     display: 'standalone',
     background_color: '#FFFFFF',
