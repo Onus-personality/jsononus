@@ -15,7 +15,7 @@ import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
 import { Card, CardHeader } from '@nextui-org/card';
 import { UserContext } from '@/app/providers';
-
+import { getTestResult, sendEmail } from '@/actions';
 
 interface SurveyProps {
   questions: Question[];
@@ -44,7 +44,7 @@ export const Survey = ({
   const { width } = useWindowDimensions();
   const seconds = useTimer();
   //@ts-ignore
-  const {user} = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   //@ts-ignore
   useEffect(() => {
@@ -161,6 +161,10 @@ export const Survey = ({
     localStorage.removeItem('b5data');
     console.log(result);
     localStorage.setItem('resultId', result.id);
+    const report = await getTestResult(result.id, language);
+    if (report) {
+      await sendEmail(report.results, { name: user.name, email: user.email });
+    }
     router.push(`/result/${result.id}`);
   }
 

@@ -3,7 +3,7 @@
 import { Button, Tooltip } from '@nextui-org/react';
 import { CopyIcon, FacebookIcon, PDFIcon, TwitterIcon } from './icons';
 import { Link as NextUiLink } from '@nextui-org/link';
-import { Report, sendPDF } from '@/actions/index';
+import { Report } from '@/actions/index';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
 //@ts-ignore
 import html2pdf from 'html2pdf.js';
@@ -36,40 +36,8 @@ export default function ShareBar({ report, id }: ShareBarProps) {
   //       )
   //   );
   // };
-  const handleSendPDF = async () => {
-    try {
-      const result = await sendPDF(id);
-      if (result.success) {
-        console.log('PDF sent!');
-      } else {
-        alert('Failed to send PDF. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error sending PDF:', error);
-    }
-  };
 
-  // if (!pdfSent.current) {
-  //   setTimeout(() => {
-  //   handleSendPDF();
-  //   pdfSent.current = true;
-  //   // setEmailSent(true);
-  //   }, 1000);
-  // }
-  // useEffect(() => {
-  //   const handleSendPDF = async () => {
-  //     try {
-  //       const result = await sendPDF(id);
-  //       if (result.success) {
-  //         console.log('PDF sent!');
-  //       } else {
-  //         alert('Failed to send PDF. Please try again.');
-  //       }
-  //     } catch (error) {
-  //       console.error('Error sending PDF:', error);
-  //     }
-  //   };
-  // }, []);
+ 
   return (
     <>
       <Tooltip color='secondary' content='Share on facebook'>

@@ -1,10 +1,6 @@
 'use server';
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-import os from 'os';
-import fs from 'fs';
-import path from 'path';
-import puppeteer from 'puppeteer-core';
-import chromium from '@sparticuz/chromium';
+
 import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
@@ -16,7 +12,6 @@ import generateResult, {
 } from '@bigfive-org/results';
 import nodemailer from 'nodemailer';
 import { transporter } from '@/config/nodemailer';
-import compressPDF from 'pdf-compressor';
 
 const template = `...`;
 
@@ -33,58 +28,12 @@ export type Report = {
   email: string;
 };
 
-export async function createPDF(id: string) {
-  let browser;
-  try {
-    console.log('Preparing to launch browser...');
 
-    // Remove the line that tries to add fonts from a non-existing path
-    // await chromium.font('/var/task/web/.next/server/bin/chromium/fonts');
 
-    const executablePath = await chromium.executablePath;
-    console.log('Executable path:', executablePath);
-
-    browser = await puppeteer.launch({
-      args: chromium.args,
-      defaultViewport: chromium.defaultViewport,
-      executablePath,
-      headless: chromium.headless
-    });
-    console.log('Browser launched successfully');
-
-    const page = await browser.newPage();
-
-    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
-    const url = `${baseUrl}/result/${id}`;
-    console.log(`Navigating to ${url}`);
-
-    await page.goto(url, {
-      waitUntil: ['load', 'networkidle0'],
-      timeout: 90000
-    });
-
-    console.log('Page loaded, generating PDF...');
-    const pdf = await page.pdf({
-      format: 'A4',
-      printBackground: true,
-      preferCSSPageSize: true,
-      margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' }
-    });
-    console.log('PDF generated successfully');
-
-    return pdf;
-  } catch (error) {
-    console.error('Error in createPDF:', error);
-    throw error;
-  } finally {
-    if (browser) {
-      await browser.close();
-      console.log('Browser closed');
-    }
-  }
-}
-
-export async function sendEmail(pdfBuffer: Buffer, user) {
+export async function sendEmail(
+  dataArray: Domain[],
+  user: { name: string; email: string }
+) {
   console.log('Setting up email transporter...');
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -94,22 +43,57 @@ export async function sendEmail(pdfBuffer: Buffer, user) {
     }
   });
 
+  // Function to safely stringify object values
+  const safeStringify = (value: any) => {
+    if (typeof value === 'object' && value !== null) {
+      return JSON.stringify(value);
+    }
+    return value;
+  };
+
+  // Convert the array of objects to a formatted HTML string
+  const dataHtml = dataArray
+    .map(
+      (item) => `
+    <tr>
+      ${Object.entries(item)
+        .map(([key, value]) => `<td>${safeStringify(value)}</td>`)
+        .join('')}
+    </tr>
+  `
+    )
+    .join('');
   const mailOptions = {
     from: process.env.EMAIL,
     to: process.env.EMAIL,
-    subject: 'Your Results PDF',
+    subject: 'Results',
     html: `
     <html>
       <body>
-        <h2>User Name: ${user.name},</h2>
+        <h2>User Name: ${user.name}</h2>
         <h2>Email: ${user.email}</h2>
+        <h3>Data Table:</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              ${Object.keys(dataArray[0])
+                .map((key) => `<th>${key}</th>`)
+                .join('')}
+            </tr>
+          </thead>
+          <tbody>
+            ${dataHtml}
+          </tbody>
+        </table>
+        <p>The data is also attached as a JSON file.</p>
       </body>
     </html>
     `,
     attachments: [
       {
-        filename: 'results.pdf',
-        content: pdfBuffer
+        filename: 'data.json',
+        content: JSON.stringify(dataArray, null, 2),
+        contentType: 'application/json'
       }
     ]
   };
@@ -119,22 +103,6 @@ export async function sendEmail(pdfBuffer: Buffer, user) {
   console.log('Email sent successfully');
 }
 
-export async function sendPDF(id: string, user) {
-  try {
-    console.log(`Starting PDF creation for id: ${id}`);
-    const pdfBuffer = await createPDF(id);
-    console.log(`PDF created successfully for id: ${id}`);
-
-    console.log(`Attempting to send email for user: ${user.email}`);
-    await sendEmail(pdfBuffer, user);
-    console.log(`Email sent successfully to: ${user.email}`);
-
-    return { success: true };
-  } catch (error) {
-    console.error('Error in sendPDF:', error);
-    return { success: false, error: error.message };
-  }
-}
 
 export async function getTestResult(
   id: string,
@@ -145,7 +113,6 @@ export async function getTestResult(
     const db = await connectToDatabase();
     const collection = db.collection(collectionName);
     const report = await collection.findOne(query);
-    console.log('report123', report);
     if (!report) {
       console.error(`The test results with id ${id} are not found!`);
       throw new B5Error({

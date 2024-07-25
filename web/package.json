@@ -40,7 +40,7 @@
     "@nextui-org/user": "2.0.28",
     "@react-aria/ssr": "3.9.2",
     "@react-aria/visually-hidden": "3.8.10",
-    "@sparticuz/chromium": "121",
+   
     "@vercel/analytics": "1.2.2",
     "@vercel/kv": "1.0.1",
     "apexcharts": "3.49.0",
@@ -64,8 +64,6 @@
     "pdf-compressor": "^1.0.5",
     "pdf-lib": "^1.17.1",
     "postcss": "8.4.38",
-    "puppeteer": "^22.13.1",
-    "puppeteer-core": "^22.13.1",
     "react": "18.3.0",
     "react-apexcharts": "1.4.1",
     "react-dom": "18.3.0",

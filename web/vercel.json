@@ -5,11 +5,6 @@
       "src": "next.config.js",
       "use": "@vercel/next"
     }
-  ],
- 
-  "build": {
-    "env": {
-      "CHROME_EXECUTABLE_PATH": "/usr/bin/chromium-browser"
-    }
-  }
+  ]
+
 }
