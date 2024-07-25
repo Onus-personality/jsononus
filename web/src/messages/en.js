@@ -45,7 +45,7 @@ const english = {
       }
     },
     description: {
-      top: 'Learn to know yourself better with a <violet>free</violet>, open-source personality test.',
+      top: "You can't fail a personality profile. Just be yourself and choose the answers that best describe you",
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
