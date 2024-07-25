@@ -85,54 +85,7 @@ const Results = ({ report, showExpanded, id }: ResultsProps) => {
           <button className='bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-700 transition duration-300'>
             Download Your Results
           </button>
-          <div className='flex mt-5 justify-end w-full gap-x-1'>
-            <ShareBar report={report} id={id} />
-          </div>
         </div>
-      </div>
-      {/* show the bottom code only in the print, and the above code in only in normal view */}
-
-      <div id='pdf-content' className=''>
-        <div className='flex'>
-          <div className='flex-grow'>
-            <ReportLanguageSwitch
-              language={report.language}
-              availableLanguages={report.availableLanguages}
-            />
-          </div>
-          <Chip>{new Date(report.timestamp).toLocaleDateString()}</Chip>
-        </div>
-        <div className='text-center mt-4'>
-          <span className='font-bold'>{t('important')}</span> &nbsp;
-          {t('saveResults')} &nbsp;
-          <Link href={`/compare/?id=${report.id}`} className='underline'>
-            {t('compare')}
-          </Link>{' '}
-          &nbsp;
-          {t('toOthers')}
-        </div>
-        <div className='flex mt-4'>
-          <Snippet
-            hideSymbol
-            color='danger'
-            className='w-full justify-center'
-            size='lg'
-          >
-            {report.id}
-          </Snippet>
-        </div>
-        <div className='flex mt-5 justify-end w-full gap-x-1'>
-          <ShareBar report={report} id={id} />
-        </div>
-        <div className='flex mt-10'>
-          <h1 className={title()}>{t('theBigFive')}</h1>
-        </div>
-        <BarChart max={120} results={report.results} />
-        <DomainTabs
-          results={report.results}
-          showExpanded={!!showExpanded}
-          scoreText={t('score')}
-        />
       </div>
     </div>
   );
