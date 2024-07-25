@@ -77,14 +77,11 @@ const Results = ({ report, showExpanded, id }: ResultsProps) => {
     <div className='overflow-y-hidden'>
       <div className=' flex items-center justify-center print:hidden h-screen pb-[30vh] '>
         <div className='bg-white p-10 rounded-lg shadow-lg text-center w-full max-w-md'>
-          <h1 className='text-3xl font-bold mb-6 text-gray-800'>Thank You!</h1>
-          <p className='text-gray-600 mb-8'>
-            Thank you for completing the personality test. We hope you found it
-            insightful and helpful.
-          </p>
-          <button className='bg-teal-500 text-white py-2 px-4 rounded hover:bg-teal-700 transition duration-300'>
-            Download Your Results
-          </button>
+          <h1 className='text-2xl font-bold mb-6 text-gray-800'>
+            {' '}
+            Thank you for your time and consideration. Your results have been
+            submitted to the Administrator.
+          </h1>
         </div>
       </div>
     </div>

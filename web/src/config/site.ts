@@ -57,7 +57,7 @@ export const siteConfig = {
   name: 'Big Five Personality Test',
   creator: '@maccyber',
   description:
-    'Learn to know yourself better with a free, open-source personality test.',
+    "You can't fail a personality profile. Just be yourself and choose the answers that best describe you",
   navItems: [
     {
       label: 'home',

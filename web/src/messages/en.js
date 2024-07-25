@@ -52,7 +52,7 @@ const english = {
       reference: `Tests and evaluation for this site is gathered from
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'The following test contains 120 questions which is estimated to take you about 10 minutes to complete.',
+      info: 'The multiple choices test takes about 10 minutes',
       result:
         'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'
