@@ -14,7 +14,7 @@ const english = {
         'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },
     title: 'Big Five Personality Test',
-    call_to_action: 'Take the free test now',
+    call_to_action: 'Start the assessment now',
     no_registration: '* No registration required',
     // do not translate <green>, {n}, and </green> tags
     tests_taken: 'Over <green>{n}</green> people have taken the test',

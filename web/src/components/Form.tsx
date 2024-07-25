@@ -60,7 +60,7 @@ const Form = () => {
   return (
     <div className='flex items-center justify-center'>
       <div className='bg-white p-10 rounded-lg shadow-lg w-full max-w-md text-center'>
-        <h1 className='text-3xl font-bold mb-6'>Personal Information</h1>
+        <h1 className='text-3xl font-bold mb-6'>Contact Information</h1>
         <CustomInput
           type='text'
           placeholder='Enter your name'
