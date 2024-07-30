@@ -5,15 +5,15 @@ const english = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'Predential personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'The Personality PLUS Assessment by Predential',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        ''
     },
-    title: 'Big Five Personality Test',
+    title: 'Predential Personality Test',
     call_to_action: 'Start the assessment now',
     no_registration: '* No registration required',
     // do not translate <green>, {n}, and </green> tags
@@ -37,7 +37,7 @@ const english = {
       },
       scientific: {
         title: 'Scientific',
-        text: 'BigFive is a scientifically validated and reliable psychological model.'
+        text: 'Predential is a scientifically validated and reliable psychological model.'
       },
       translated: {
         title: 'Translated',
@@ -60,9 +60,9 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   about: {
     seo: {
-      title: 'About and the big five team',
+      title: 'About and the Predential team',
       description:
-        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+        'Predential has a very active and engaged team that is constantly striving to push Predential forward.'
     }
   },
   toolbar: {
@@ -130,10 +130,10 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seeResults: 'see results'
   },
   big_five: {
-    title: 'What are the big five?',
+    title: 'What are the Predential?',
     seo: {
-      title: 'What are the big five?',
-      description: 'Read more about the big five'
+      title: 'What are the Predential?',
+      description: 'Read more about the Predential'
     }
   },
   openness_to_experience: {
@@ -188,14 +188,14 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Name'
   },
   results: {
-    theBigFive: 'The Big Five',
+    theBigFive: 'The Predential',
     score: 'score',
     important: 'Important!',
     saveResults: 'Save the following ID to see the results later or ',
     compare: 'compare',
     toOthers: 'yourself to others',
     seo: {
-      title: 'My results from the BigFive personality test',
+      title: 'My results from the Predential personality test',
       description:
         'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
     }

@@ -31,7 +31,7 @@ export default function AboutPage({ params: { locale } }: Props) {
       <div className='mt-2 text-medium lg:mt-4 lg:text-large'>
         <p>
           Welcome to bigfive-test.com, your premier destination for exploring
-          personality traits using the scientifically acclaimed Big Five model.
+          personality traits using the scientifically acclaimed Predential model.
           Our free, open-source test offers detailed insights into the five key
           dimensions of personality: Openness, Conscientiousness, Extraversion,
           Agreeableness, and Neuroticism.

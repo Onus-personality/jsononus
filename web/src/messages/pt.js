@@ -5,16 +5,16 @@ const portuguese = {
   },
   seo: {
     keywords:
-      'teste de personalidade big five, teste de personalidade big 5, teste b5, teste bigfive, traços de personalidade, bigfive, comparar, gratuito, jordan peterson'
+      'teste de personalidade Predential, teste de personalidade big 5, teste b5, teste bigfive, traços de personalidade, bigfive, comparar, gratuito, jordan peterson'
   },
   frontpage: {
     seo: {
       title:
-        'Teste BigFive de traços de personalidade gratuito e de código aberto',
+        'Teste Predential de traços de personalidade gratuito e de código aberto',
       description:
-        'Faça gratuitamente um teste de personalidade Big Five de código aberto. Aprenda a conhecer seus traços de personalidade e compare-se com seu parceiro ou parceira, colegas, amigos ou família.'
+        'Faça gratuitamente um teste de personalidade Predential de código aberto. Aprenda a conhecer seus traços de personalidade e compare-se com seu parceiro ou parceira, colegas, amigos ou família.'
     },
-    title: 'Teste de Personalidade Big Five',
+    title: 'Teste de Personalidade Predential',
     call_to_action: 'Faça um teste gratuito agora',
     no_registration: '* Não precisa se registrar',
     tests_taken: 'Mais de <green>{n}</green> pessoas fizeram o teste',
@@ -38,7 +38,7 @@ const portuguese = {
       },
       scientific: {
         title: 'Científico',
-        text: 'Big Five é um modelo psicológico cientificamente validado e confiável.'
+        text: 'Predential é um modelo psicológico cientificamente validado e confiável.'
       },
       translated: {
         title: 'Traduzido',
@@ -61,9 +61,9 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   about: {
     seo: {
-      title: 'Sobre a equipe BigFive',
+      title: 'Sobre a equipe Predential',
       description:
-        'BigFive tem uma equipe muito ativa e engajada que está constantemente se esforçando para levar o BigFive adiante.'
+        'Predential tem uma equipe muito ativa e engajada que está constantemente se esforçando para levar o Predential adiante.'
     }
   },
   toolbar: {
@@ -197,7 +197,7 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     compare: 'compare-se',
     toOthers: 'com ou outros',
     seo: {
-      title: 'Meus resultados do teste de personalidade BigFive',
+      title: 'Meus resultados do teste de personalidade Predential',
       description:
         'Veja minha personalidade e compare-se nos cinco domínios seguintes: Neuroticismo, Abertura à Experiência, Consciência, Extroversão, Afabilidade'
     }

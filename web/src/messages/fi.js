@@ -10,9 +10,9 @@ const finnish = {
   frontpage: {
     seo: {
       title:
-        'Ilmainen avoimen lähdekoodin BigFive-persoonallisuuspiirteiden testi',
+        'Ilmainen avoimen lähdekoodin Predential-persoonallisuuspiirteiden testi',
       description:
-        'Ota ilmainen, avoimen lähdekoodin Big Five -henkilöstötesti. Opi tuntemaan persoonallisuutesi ja vertaamaan itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.'
+        'Ota ilmainen, avoimen lähdekoodin Predential -henkilöstötesti. Opi tuntemaan persoonallisuutesi ja vertaamaan itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.'
     },
     title: 'Viiden suuren persoonallisuustesti',
     call_to_action: 'Ota ilmainen testi nyt',
@@ -36,7 +36,7 @@ const finnish = {
       },
       scientific: {
         title: 'Tieteellinen',
-        text: 'BigFive on tieteellisesti validoitu ja luotettava psykologinen malli.'
+        text: 'Predential on tieteellisesti validoitu ja luotettava psykologinen malli.'
       },
       translated: {
         title: 'Käännetty',
@@ -192,7 +192,7 @@ const finnish = {
     compare: 'vertailla',
     toOthers: 'itsesi muille',
     seo: {
-      title: 'Tulokseni BigFive-persoonallisuustestistä',
+      title: 'Tulokseni Predential-persoonallisuustestistä',
       description:
         'Katso persoonallisuuttani ja vertaa itseäsi seuraavilla viidellä osa-alueella: neurotismi, avoimuus kokemukselle, tunnollisuus, ekstraversio, sopusointuisuus'
     }

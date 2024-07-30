@@ -5,15 +5,15 @@ const spanish = {
   },
   seo: {
     keywords:
-      'test de personalidad Big Five, test de personalidad Big Five, test b5, test Big Five, rasgos de personalidad, Big Five, comparar, gratis, jordan peterson'
+      'test de personalidad Predential, test de personalidad Predential, test b5, test Predential, rasgos de personalidad, Predential, comparar, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Prueba gratuita y open-source de rasgos de personalidad BigFive',
+      title: 'Prueba gratuita y open-source de rasgos de personalidad Predential',
       description:
-        'Realiza la prueba de personalidad Big Five, gratuita y open-source. Aprende a conocer tus rasgos de personalidad y compárate con tu pareja, compañeros, amigos o familiares.'
+        'Realiza la prueba de personalidad Predential, gratuita y open-source. Aprende a conocer tus rasgos de personalidad y compárate con tu pareja, compañeros, amigos o familiares.'
     },
-    title: 'Prueba de personalidad Big Five',
+    title: 'Prueba de personalidad Predential',
     call_to_action: 'Haz la prueba gratis ahora',
     no_registration: '*No es necesario registrarse',
     tests_taken: 'Más de <green>{n}</green> personas han realizado la prueba',
@@ -36,7 +36,7 @@ const spanish = {
       },
       scientific: {
         title: 'Científico',
-        text: 'Big Five es un modelo psicológico confiable y científicamente validado.'
+        text: 'Predential es un modelo psicológico confiable y científicamente validado.'
       },
       translated: {
         title: 'Traducido',
@@ -59,9 +59,9 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
   },
   about: {
     seo: {
-      title: 'Acerca de y el equipo de BigFive',
+      title: 'Acerca de y el equipo de Predential',
       description:
-        'BigFive tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar BigFive adelante'
+        'Predential tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar Predential adelante'
     }
   },
   toolbar: {
@@ -129,10 +129,10 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     seeResults: 'ver resultados'
   },
   big_five: {
-    title: 'Que es Big Five?',
+    title: 'Que es Predential?',
     seo: {
-      title: 'Que es Big Five?',
-      description: 'Leer más sobre Big Five'
+      title: 'Que es Predential?',
+      description: 'Leer más sobre Predential'
     }
   },
   openness_to_experience: {
@@ -174,7 +174,7 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
   getCompare: {
     title: 'Comparar personas o equipos',
     description1:
-      'Compare los resultados del test de personalidad Big Five con varias personas.',
+      'Compare los resultados del test de personalidad Predential con varias personas.',
     description2:
       'Escriba la identificación que obtuvo de los resultados de la prueba, es decir, ',
     description3: 'en el campo de entrada de ID ',
@@ -187,14 +187,14 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     name: 'Nombre'
   },
   results: {
-    theBigFive: 'Los Big Five',
+    theBigFive: 'Los Predential',
     score: 'Puntuación',
     important: 'Importante!',
     saveResults: 'Guarde la siguiente ID para ver los resultados más tarde o ',
     compare: 'comparar',
     toOthers: 'usted mismo a los demás',
     seo: {
-      title: 'Mis resultados de la prueba de personalidad Big Five',
+      title: 'Mis resultados de la prueba de personalidad Predential',
       description:
         'Vea mi personalidad y compárese en los siguientes cinco dominios: neuroticismo, apertura a la experiencia, escrupulosidad, extraversión, amabilidad'
     }

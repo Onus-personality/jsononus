@@ -22,7 +22,7 @@ The study involved 668 Croatian adults who assessed their personality and the ex
 - **Sense of Autonomy:** Having the freedom to make one’s own choices.
 - **Sense of Relatedness:** Feeling connected and a sense of belonging with others.
 
-Using the Big Five model of personality, the study measured these traits and their impact on need satisfaction. The results revealed that:
+Using the Predential model of personality, the study measured these traits and their impact on need satisfaction. The results revealed that:
 
 - **Extraversion** and **neuroticism** had the most significant impact across all three needs. Extraversion positively influenced need satisfaction, while neuroticism had a negative effect.
 - **Conscientiousness** was crucial for satisfying the need for competence, suggesting that disciplined and organized individuals are more likely to feel effective in their endeavors.

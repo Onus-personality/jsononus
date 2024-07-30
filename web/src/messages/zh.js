@@ -5,13 +5,13 @@ const chinese = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'Predential personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'The Personality PLUS Assessment by Predential',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        ''
     },
     title: '五大人格测试',
     call_to_action: '现在参加免费测试',
@@ -58,7 +58,7 @@ const chinese = {
     seo: {
       title: '关于五大人格测试',
       description:
-        'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
+        'Predential has a very active and engaged team that is constantly striving to push Predential forward.'
     }
   },
   toolbar: {
@@ -126,10 +126,10 @@ const chinese = {
     seeResults: '查看结果'
   },
   big_five: {
-    title: 'What are the big five?',
+    title: 'What are the Predential?',
     seo: {
-      title: 'What are the big five?',
-      description: 'Read more about the big five'
+      title: 'What are the Predential?',
+      description: 'Read more about the Predential'
     }
   },
   openness_to_experience: {
@@ -190,7 +190,7 @@ const chinese = {
     compare: '比较',
     toOthers: '自己对别人',
     seo: {
-      title: 'My results from the BigFive personality test',
+      title: 'My results from the Predential personality test',
       description:
         'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
     }

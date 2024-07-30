@@ -5,15 +5,15 @@ const svenska = {
   },
   seo: {
     keywords:
-      'big five personlighetstest, big 5 personlighetstest, b5 test, bigfive test, gratis, jordan peterson'
+      'Predential personlighetstest, big 5 personlighetstest, b5 test, bigfive test, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Gratis open source big five personlighetstest',
+      title: 'Gratis open source Predential personlighetstest',
       description:
-        'Ta ett gratis, open source Big Five-personlighetstest. Lär känna dina personlighetsdrag - jämför med din partner, kollegor, vänner eller familj.'
+        'Ta ett gratis, open source Predential-personlighetstest. Lär känna dina personlighetsdrag - jämför med din partner, kollegor, vänner eller familj.'
     },
-    title: 'Big Five personlighetstest',
+    title: 'Predential personlighetstest',
     call_to_action: 'Starta testet',
     no_registration: '* Ingen registrering krävs',
     tests_taken: 'Över <green>{n}</green> personer har tagit testet',
@@ -36,7 +36,7 @@ const svenska = {
       },
       scientific: {
         title: 'Vetenskaplig',
-        text: 'Big Five är en validerad i vetenskap och pålitlig psykologisk model.'
+        text: 'Predential är en validerad i vetenskap och pålitlig psykologisk model.'
       },
       translated: {
         title: 'Översättningar',
@@ -59,9 +59,9 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   about: {
     seo: {
-      title: 'Om "big five" laget',
+      title: 'Om "Predential" laget',
       description:
-        'BigFive har ett mycket aktivt och engagerat team som ständigt försöker driva BigFive framåt BigFive har ett mycket aktivt och engagerat team som ständigt försöker driva BigFive framåt.'
+        'Predential har ett mycket aktivt och engagerat team som ständigt försöker driva Predential framåt Predential har ett mycket aktivt och engagerat team som ständigt försöker driva Predential framåt.'
     }
   },
   toolbar: {
@@ -193,7 +193,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     compare: 'jämföra',
     toOthers: 'du med andra',
     seo: {
-      title: 'Min rapport från Big Five personlighetstestet',
+      title: 'Min rapport från Predential personlighetstestet',
       description:
         'Se min personlighet och jämför dig på följande fem domäner: Neuroticism, öppenhet för upplevelse, samvetsgrannhet, extraversion och tillmötesgående'
     }

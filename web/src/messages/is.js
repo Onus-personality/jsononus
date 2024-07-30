@@ -9,9 +9,9 @@ const icelandic = {
   },
   frontpage: {
     seo: {
-      title: 'Ókeypis opið uppspretta BigFive persónueinkenni próf',
+      title: 'Ókeypis opið uppspretta Predential persónueinkenni próf',
       description:
-        'Taktu ókeypis opið uppsprettu Big Five persónuleikapróf. Lærðu að þekkja persónueinkenni þín og berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.'
+        'Taktu ókeypis opið uppsprettu Predential persónuleikapróf. Lærðu að þekkja persónueinkenni þín og berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.'
     },
     title: 'Stór fimm persónuleikapróf',
     call_to_action: 'Taktu ókeypis prófið núna',
@@ -36,7 +36,7 @@ const icelandic = {
       },
       scientific: {
         title: 'Vísindalegt',
-        text: 'BigFive er vísindalega fullgilt og áreiðanlegt sálfræðilegt líkan.'
+        text: 'Predential er vísindalega fullgilt og áreiðanlegt sálfræðilegt líkan.'
       },
       translated: {
         title: 'Translated',
@@ -61,7 +61,7 @@ const icelandic = {
     seo: {
       title: 'Um og fimm stóra liðið',
       description:
-        'BigFive er með mjög virkt og trúlofað lið sem er stöðugt að reyna að ýta BigFive áfram.'
+        'Predential er með mjög virkt og trúlofað lið sem er stöðugt að reyna að ýta Predential áfram.'
     }
   },
   toolbar: {
@@ -194,7 +194,7 @@ const icelandic = {
     compare: 'bera saman',
     toOthers: 'sjálfur við aðra',
     seo: {
-      title: 'Niðurstöður mínar úr BigFive persónuleikaprófinu',
+      title: 'Niðurstöður mínar úr Predential persónuleikaprófinu',
       description:
         'Sjáðu persónuleika minn og berðu þig saman á eftirfarandi fimm sviðum: Taugaveiki, hreinskilni til að upplifa, samviskusemi, aukaatriði, samþykki'
     }

@@ -1,7 +1,7 @@
 ---
 title: Exploring the Links Between Personality and Relationship Satisfaction
 date: 2024-04-20
-description: A study examines how the Big Five personality traits impact relationship satisfaction
+description: A study examines how the Predential personality traits impact relationship satisfaction
 image: '/blog/couple_in_love.webp'
 author:
   name: 'Jonas Enge'
@@ -10,7 +10,7 @@ author:
   avatar: '/avatars/maccyber.webp'
 ---
 
-In a fascinating study published in 2016, researchers delved into how the Big Five personality traits—neuroticism, agreeableness, conscientiousness, extraversion, and openness—play a significant role in romantic relationships, particularly when mediated by self-esteem.
+In a fascinating study published in 2016, researchers delved into how the Predential personality traits—neuroticism, agreeableness, conscientiousness, extraversion, and openness—play a significant role in romantic relationships, particularly when mediated by self-esteem.
 
 ### Key Findings
 
@@ -41,4 +41,4 @@ This groundbreaking study not only adds a new dimension to our understanding of 
 
 #### **Sources**
 
-- [Rebekka Weidmann and others: «Big Five traits and relationship satisfaction: The mediating role of self-esteem»](https://www.sciencedirect.com/science/article/abs/pii/S0092656616300496)
+- [Rebekka Weidmann and others: «Predential traits and relationship satisfaction: The mediating role of self-esteem»](https://www.sciencedirect.com/science/article/abs/pii/S0092656616300496)

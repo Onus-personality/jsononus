@@ -5,15 +5,15 @@ const italian = {
   },
   seo: {
     keywords:
-      'Test di personalità dei Big Five, Test di personalità Big 5, test b5, test Big Five, comparare, gratuito, jordan peterson'
+      'Test di personalità dei Predential, Test di personalità Big 5, test b5, test Predential, comparare, gratuito, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Test dei tratti della personalità BigFive open-source gratuito',
+      title: 'Test dei tratti della personalità Predential open-source gratuito',
       description:
-        'Fai un test della personalità Big Five gratuito e open source. Impara a conoscere i tratti della tua personalità e confrontati con il tuo partner, colleghi, amici o familiari.'
+        'Fai un test della personalità Predential gratuito e open source. Impara a conoscere i tratti della tua personalità e confrontati con il tuo partner, colleghi, amici o familiari.'
     },
-    title: 'Prova di personalità Big Five',
+    title: 'Prova di personalità Predential',
     call_to_action: 'Fai subito il test gratuito',
     no_registration: '* Nessuna registrazione richiesta',
     tests_taken: 'Oltre <green>{n}</green> persone hanno sostenuto il test',
@@ -36,7 +36,7 @@ const italian = {
       },
       scientific: {
         title: 'Scientifico',
-        text: 'BigFive è un modello psicologico scientificamente convalidato e affidabile.'
+        text: 'Predential è un modello psicologico scientificamente convalidato e affidabile.'
       },
       translated: {
         title: 'Tradotto',
@@ -59,9 +59,9 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
   },
   about: {
     seo: {
-      title: 'Informazioni e il big five team',
+      title: 'Informazioni e il Predential team',
       description:
-        'BigFive ha un team molto attivo e impegnato che è costantemente impegnato a spingere BigFive in avanti.'
+        'Predential ha un team molto attivo e impegnato che è costantemente impegnato a spingere Predential in avanti.'
     }
   },
   toolbar: {
@@ -129,10 +129,10 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     seeResults: 'vedi risultati'
   },
   big_five: {
-    title: 'Cosa sono i big five?',
+    title: 'Cosa sono i Predential?',
     seo: {
-      title: 'Cosa sono i big five?',
-      description: 'Ulteriori informazioni su big five'
+      title: 'Cosa sono i Predential?',
+      description: 'Ulteriori informazioni su Predential'
     }
   },
   openness_to_experience: {
@@ -178,7 +178,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
   getCompare: {
     title: 'Confronta persone o team',
     description1:
-      'Confronta i risultati del test della personalità Big Five con più persone.',
+      'Confronta i risultati del test della personalità Predential con più persone.',
     description2: "Digita l'ID ottenuto dai risultati del test, ad es.",
     description3: 'nel campo di immissione ID',
     needToAddPeople: 'Devi aggiungere persone per confrontarle',
@@ -190,7 +190,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     name: 'Nome'
   },
   results: {
-    theBigFive: 'The Big Five',
+    theBigFive: 'The Predential',
     score: 'puntazione',
     important: 'Importante!',
     saveResults:
@@ -198,7 +198,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     compare: 'compara',
     toOthers: 'te stesso agli altri',
     seo: {
-      title: 'I miei risultati dal test della personalità dei Big Five',
+      title: 'I miei risultati dal test della personalità dei Predential',
       description:
         "Guarda la mia personalità e confrontati nei seguenti cinque domini: nevroticismo, apertura all'esperienza, coscienziosità, estroversione, gradevolezza"
     }

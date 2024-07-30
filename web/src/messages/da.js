@@ -5,15 +5,15 @@ const dansk = {
   },
   seo: {
     keywords:
-      'big five personlighedstest, big 5 personlighedstest, b5 test, bigfive test, her er hvordan du, harald eia, sammenligne, gratis, jordan peterson'
+      'Predential personlighedstest, big 5 personlighedstest, b5 test, bigfive test, her er hvordan du, harald eia, sammenligne, gratis, jordan peterson'
   },
   frontpage: {
     seo: {
-      title: 'Gratis open source big five personlighedstest',
+      title: 'Gratis open source Predential personlighedstest',
       description:
-        'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
+        'Tag en gratis open source Predential-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
     },
-    title: 'Big Five personlighedstest',
+    title: 'Predential personlighedstest',
     call_to_action: 'Start testen',
     no_registration: '* Ingen registrering krævet',
     tests_taken: 'Over <green>{n}</green> mennesker har taget testen',
@@ -37,7 +37,7 @@ const dansk = {
       },
       scientific: {
         title: 'Videnskabelig',
-        text: 'Big Five er en videnskabeligt valideret og pålidelig psykologisk model.'
+        text: 'Predential er en videnskabeligt valideret og pålidelig psykologisk model.'
       },
       translated: {
         title: 'Oversættelse',
@@ -60,9 +60,9 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   about: {
     seo: {
-      title: 'Om "big five" laget',
+      title: 'Om "Predential" laget',
       description:
-        'BigFive har et meget aktivt og engageret team, der konstant forsøger at skubbe BigFive fremad BigGive har et meget aktivt og engageret team, der konstant forsøger at skubbe BigFive fremad.'
+        'Predential har et meget aktivt og engageret team, der konstant forsøger at skubbe Predential fremad BigGive har et meget aktivt og engageret team, der konstant forsøger at skubbe Predential fremad.'
     }
   },
   toolbar: {
@@ -194,7 +194,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     compare: 'sammenligne',
     toOthers: 'dig sammen med andre',
     seo: {
-      title: 'Min rapport fra BigFive personlighedstest',
+      title: 'Min rapport fra Predential personlighedstest',
       description:
         'Se min personlighed, og sammenlign dig selv på følgende fem domæner: Neurotisme, åbenhed for oplevelser, planlagt, ekstraversion og menneskehed'
     }

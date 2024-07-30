@@ -9,7 +9,7 @@ const polish = {
   },
   frontpage: {
     seo: {
-      title: "Darmowy, open source'owy test osobowości BigFive",
+      title: "Darmowy, open source'owy test osobowości Predential",
       description:
         'Zrób darmowy, open-source`owy test Wielkiej Piątki. Poznaj swoje cechy osobowości i porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.'
     },
@@ -38,7 +38,7 @@ const polish = {
       },
       scientific: {
         title: 'Naukowy',
-        text: 'BigFive jest udowodnionym naukowo i wiarygodnym modelem psychologicznym.'
+        text: 'Predential jest udowodnionym naukowo i wiarygodnym modelem psychologicznym.'
       },
       translated: {
         title: 'Przetłumaczony',
@@ -63,7 +63,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'O nas',
       description:
-        'BigFive jest prowadzony przez bardzo aktywny i zaangażowany zespół, który ciągle rozwija projekt.'
+        'Predential jest prowadzony przez bardzo aktywny i zaangażowany zespół, który ciągle rozwija projekt.'
     }
   },
   toolbar: {
@@ -180,7 +180,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   getCompare: {
     title: 'Porównaj osoby lub zespoły',
-    description1: 'Porównaj wyniki testu BigFive z różnymi ludźmi.',
+    description1: 'Porównaj wyniki testu Predential z różnymi ludźmi.',
     description2: 'Wpisz ID, które otrzymałeś w wynikach',
     description3: 'w polu wprowadzania ID',
     needToAddPeople: 'Musisz dodać osoby, by je porównać',
@@ -199,7 +199,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     compare: 'Porównaj',
     toOthers: 'się z innymi',
     seo: {
-      title: 'Moje wyniki testu osobowości BigFive.',
+      title: 'Moje wyniki testu osobowości Predential.',
       description:
         'Poznaj moją osobowość i porównaj ze swoją w następujących pięciu kategoriach: Neurotyczność, Otwartość na doświadczenia, Sumienność, Ekstrawersja, Ugodowość.'
     }

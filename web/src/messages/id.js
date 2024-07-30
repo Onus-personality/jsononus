@@ -9,7 +9,7 @@ const indonesian = {
   },
   frontpage: {
     seo: {
-      title: 'Tes open-source sifat kepribadian BigFive gratis',
+      title: 'Tes open-source sifat kepribadian Predential gratis',
       description:
         'Ikuti tes open-source kepribadian Lima Besar gratis. Belajar untuk mengetahui ciri-ciri kepribadian Anda dan bandingkan diri Anda dengan pasangan, kolega, teman atau keluarga Anda.'
     },
@@ -37,7 +37,7 @@ const indonesian = {
       },
       scientific: {
         title: 'Ilmiah',
-        text: 'BigFive adalah model psikologis yang divalidasi secara ilmiah dan dapat diandalkan.'
+        text: 'Predential adalah model psikologis yang divalidasi secara ilmiah dan dapat diandalkan.'
       },
       translated: {
         title: 'Diterjemahkan',
@@ -62,7 +62,7 @@ const indonesian = {
     seo: {
       title: 'Tentang dan tim lima besar',
       description:
-        'BigFive memiliki tim yang sangat aktif dan terlibat yang terus berusaha untuk mendorong BigFive ke depan.'
+        'Predential memiliki tim yang sangat aktif dan terlibat yang terus berusaha untuk mendorong Predential ke depan.'
     }
   },
   toolbar: {
@@ -198,7 +198,7 @@ const indonesian = {
     compare: 'membandingkan',
     toOthers: 'diri Anda kepada orang lain',
     seo: {
-      title: 'Hasil saya dari tes kepribadian BigFive',
+      title: 'Hasil saya dari tes kepribadian Predential',
       description:
         'Lihat kepribadian saya dan bandingkan diri Anda dalam lima domain berikut: Neurotisisme, Keterbukaan terhadap Pengalaman, Kehati-hatian, Ekstraversi, Kepersetujuan'
     }

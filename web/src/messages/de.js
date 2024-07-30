@@ -5,15 +5,15 @@ const deutsh = {
   },
   seo: {
     keywords:
-      'Big Five Persönlichkeitstest, Big 5 Persönlichkeitstest, B5 Test, BigFive Test, Persönlichkeitsmerkmale, bigfive, Vergleichen, Kostenlos, Jordan Perterson'
+      'Predential Persönlichkeitstest, Big 5 Persönlichkeitstest, B5 Test, Predential Test, Persönlichkeitsmerkmale, bigfive, Vergleichen, Kostenlos, Jordan Perterson'
   },
   frontpage: {
     seo: {
-      title: 'Kostenloser open-source BigFive Persönlichkeitstest',
+      title: 'Kostenloser open-source Predential Persönlichkeitstest',
       description:
         'Machen Sie einen kostenlosen open-source Persönlichkeitstest. Lernen Sie Ihre Persönlichkeitsmerkmale kennen und vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.'
     },
-    title: 'Big Five Persönlichkeitstest',
+    title: 'Predential Persönlichkeitstest',
     call_to_action: 'Nehmen Sie jetzt teil',
     no_registration: '* Keine Registrierung erforderlich',
     tests_taken: 'Über <green>{n}</green> Menschen haben bisher teilgenommen',
@@ -38,7 +38,7 @@ const deutsh = {
       },
       scientific: {
         title: 'Wissenschaftlich',
-        text: 'BigFive ist ein wissenschaftlich validiertes und zuverlässiges Modell zur Persönlichkeitsmessung.'
+        text: 'Predential ist ein wissenschaftlich validiertes und zuverlässiges Modell zur Persönlichkeitsmessung.'
       },
       translated: {
         title: 'Übersetzung',
@@ -63,7 +63,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Über uns',
       description:
-        'BigFive wird von einem sehr aktiven und engagierten Team geleitet, das fortwährend bemüht ist BigFive weiterzuentwickeln.'
+        'Predential wird von einem sehr aktiven und engagierten Team geleitet, das fortwährend bemüht ist Predential weiterzuentwickeln.'
     }
   },
   toolbar: {
@@ -132,10 +132,10 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seeResults: 'Ergebnisse sehen'
   },
   big_five: {
-    title: 'Was sind die Big Five?',
+    title: 'Was sind die Predential?',
     seo: {
-      title: 'Was sind die Big Five?',
-      description: 'Erfahren Sie mehr über die Big Five'
+      title: 'Was sind die Predential?',
+      description: 'Erfahren Sie mehr über die Predential'
     }
   },
   openness_to_experience: {
@@ -143,7 +143,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Übersicht über die Dimension Offenheit für Erfahrungen.',
       description:
-        'Erfahren Sie mehr über die Dimension Offenheit für Erfahrungen im Big Five Modell'
+        'Erfahren Sie mehr über die Dimension Offenheit für Erfahrungen im Predential Modell'
     }
   },
   conscientiousness: {
@@ -151,7 +151,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Übersicht über die Dimension Gewissenhaftigkeit',
       description:
-        'Erfahren Sie mehr über die Dimension Gewissenhaftigkeit im Big Five Modell'
+        'Erfahren Sie mehr über die Dimension Gewissenhaftigkeit im Predential Modell'
     }
   },
   extraversion: {
@@ -159,7 +159,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Übersicht über die Dimension Extraversion',
       description:
-        'Erfahren Sie mehr über die Dimension Extraversion im Big Five Modell'
+        'Erfahren Sie mehr über die Dimension Extraversion im Predential Modell'
     }
   },
   agreeableness: {
@@ -167,7 +167,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Übersicht über die Dimension Verträglichkeit',
       description:
-        'Erfahren Sie mehr über die Dimension Verträglichkeit im Big Five Modell'
+        'Erfahren Sie mehr über die Dimension Verträglichkeit im Predential Modell'
     }
   },
   neuroticism: {
@@ -175,13 +175,13 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     seo: {
       title: 'Übersicht über die Dimension Neurotizismus',
       description:
-        'Erfahren Sie mehr über die Dimension Neurotizismus im Big Five Modell'
+        'Erfahren Sie mehr über die Dimension Neurotizismus im Predential Modell'
     }
   },
   getCompare: {
     title: 'Vergleichen Sie Personen oder Teams',
     description1:
-      'Vergleichen Sie Ihre Ergebnisse des BigFive Persönlichkeitstests mit verschiedenen Teilnehmern.',
+      'Vergleichen Sie Ihre Ergebnisse des Predential Persönlichkeitstests mit verschiedenen Teilnehmern.',
     description2: 'Geben Sie die ID Ihrer Testergebnisse ein, z.B.',
     description3: 'in das ID-Eingabefeld',
     needToAddPeople: 'Sie müssen Personen hinzufügen um sie zu vergleichen',
@@ -193,7 +193,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Name'
   },
   results: {
-    theBigFive: 'Die BigFive',
+    theBigFive: 'Die Predential',
     score: 'Punkte',
     important: 'Wichtig!',
     saveResults:
@@ -201,7 +201,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     compare: 'zu vergleichen',
     toOthers: 'sich mit anderen',
     seo: {
-      title: 'Meine Ergebnisse des BigFive Persönlichkeitstest',
+      title: 'Meine Ergebnisse des Predential Persönlichkeitstest',
       description:
         'Erfahren Sie Ihre Persönlichkeit und vergleichen Sie sich in den folgenden fünf Bereichen: Neurotizismus, Offenheit für Erfahrungen, Gewissenhaftigkeit, Extraversion, Verträglichkeit'
     }
